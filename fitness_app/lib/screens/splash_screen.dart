@@ -12,7 +12,10 @@ class SplashScreen extends StatelessWidget {
         children: [
           // Background Image
           Positioned.fill(
-            child: Image.asset('assets/images/splash_screen.png'),
+            child: Image.asset(
+              'assets/images/splash_screen.png',
+              fit: BoxFit.cover,
+            ),
           ),
 
           // Gradient Overlay for text readability
@@ -23,7 +26,7 @@ class SplashScreen extends StatelessWidget {
                   BoxShadow(
                     color: Colors.black.withOpacity(0.1),
                     spreadRadius: 2,
-                    blurRadius: 10, 
+                    blurRadius: 10,
                   ),
                 ],
               ),
@@ -44,38 +47,58 @@ class SplashScreen extends StatelessWidget {
                       color: Colors.white,
                       fontSize: 32,
                       fontWeight: FontWeight.normal,
-                      height: 1.1,
+                      height: 1.2,
                     ),
                   ),
-                  SizedBox(height: (10)),
+                  SizedBox(height: (12)),
                   GestureDetector(
                     onTap: () {
                       context.go('/dashboard');
                     },
-                    child: Container(
-                      height: 60,
-                      decoration: BoxDecoration(
-                        color: AppTheme.primaryRed,
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                      child: Stack(
-                        children: [
-                          const Center(
-                            child: Text(
-                              'Start Training',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 15,
-                                fontWeight: FontWeight.normal,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        // Main text pill
+                        Expanded(
+                          child: Container(
+                            height: 50,
+                            decoration: BoxDecoration(
+                              color: AppTheme.primaryRed,
+                              borderRadius: BorderRadius.circular(25),
+                            ),
+                            child: const Center(
+                              child: Text(
+                                'Start Training',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.normal,
+                                  letterSpacing: 0.5,
+                                ),
                               ),
                             ),
                           ),
-                          Positioned(
-                            right: 6,
-                            top: 6,
-                            bottom: 6,
+                        ),
+
+                        // Connecting line
+                        Container(
+                          width: 16,
+                          height: 6,
+                          color: AppTheme.primaryRed,
+                        ),
+
+                        // Outer red circle with inner white play button
+                        Container(
+                          width: 50,
+                          height: 50,
+                          decoration: const BoxDecoration(
+                            color: AppTheme.primaryRed,
+                            shape: BoxShape.circle,
+                          ),
+                          child: Center(
                             child: Container(
-                              width: 48,
+                              width: 30,
+                              height: 30,
                               decoration: const BoxDecoration(
                                 color: Colors.white,
                                 shape: BoxShape.circle,
@@ -83,12 +106,12 @@ class SplashScreen extends StatelessWidget {
                               child: const Icon(
                                 Icons.play_arrow_rounded,
                                 color: AppTheme.primaryRed,
-                                size: 28,
+                                size: 24,
                               ),
                             ),
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                   SizedBox(height: (2)),
