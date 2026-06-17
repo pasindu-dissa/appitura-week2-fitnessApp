@@ -16,11 +16,10 @@ class StartCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 160, // Fixed width based on visual proportions
+      width: 160,
       height: 165,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        // Adding a subtle border if needed, but keeping it clean based on image
       ),
       // Clip behavior ensures the image stays within rounded corners
       clipBehavior: Clip.antiAlias,
@@ -43,9 +42,9 @@ class StartCard extends StatelessWidget {
               child: Container(
                 padding: const EdgeInsets.symmetric(vertical: 4),
                 decoration: BoxDecoration(
-                  // Toggle color based on isSecondaryStyle property
+                  // Toggle color based on isSecondaryStyle 
                   color: isSecondaryStyle 
-                      ? const Color(0xFFF06666) // Approximate light red color from right card
+                      ? const Color(0xFFF06666) // light red color from right card
                       : AppTheme.primaryRed,   // Dark red from left card
                   borderRadius: BorderRadius.circular(20),
                 ),

@@ -1,3 +1,5 @@
+import 'package:fitness_app/widgets/explorenow_card.dart';
+import 'package:fitness_app/widgets/recommend_card.dart';
 import 'package:fitness_app/widgets/start_card.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -25,6 +27,7 @@ class _MainDashboardState extends State<MainDashboard> {
         padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 16),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               spacing: 36,
@@ -41,6 +44,61 @@ class _MainDashboardState extends State<MainDashboard> {
                     context.go('/workout');
                   },
                   isSecondaryStyle: true,
+                ),
+              ],
+            ),
+
+            SizedBox(height: 36),
+
+            Text(
+              'Recommended for you',
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+            ),
+
+            SizedBox(height: 17,),
+
+            Row(
+              spacing: 12,
+              children: [
+                RecommendCard(
+                  imagePath: 'assets/images/recommend_card1.png',
+                  onTap: () {
+                    context.go('/workout');
+                  },
+                ),
+                RecommendCard(
+                  imagePath: 'assets/images/recommend_card2.png',
+                  onTap: () {
+                    context.go('/workout');
+                  },
+                ),
+                RecommendCard(
+                  imagePath: 'assets/images/recommend_card3.png',
+                  onTap: () {
+                    context.go('/workout');
+                  },
+                ),
+              ],
+            ),
+
+            SizedBox(height: 55),
+
+            Column(
+              spacing: 36,
+              children: [
+                ExplorenowCard(
+                  imagePath: 'assets/images/explorenow_card1.png',
+                  bannerText: 'Find me a personal Trainer',
+                  onExplore: () {
+                    context.go('/workout');
+                  },
+                ),
+                ExplorenowCard(
+                  imagePath: 'assets/images/explorenow_card2.png',
+                  bannerText: 'Find me group classes',
+                  onExplore: () {
+                    context.go('/workout');
+                  },
                 ),
               ],
             ),
