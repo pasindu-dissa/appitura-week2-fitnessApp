@@ -20,7 +20,7 @@ class AppRouter {
       GoRoute(
         path: '/workout',
         name: 'workout',
-        builder: (context, state) => const WorkoutPlan(),
+        builder: (context, state) => const DailyWorkoutPlan(),
       ),
     ],
   );

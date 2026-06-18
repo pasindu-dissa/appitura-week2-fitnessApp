@@ -57,28 +57,37 @@ class _MainDashboardState extends State<MainDashboard> {
 
             SizedBox(height: 17,),
 
-            Row(
-              spacing: 12,
-              children: [
-                RecommendCard(
-                  imagePath: 'assets/images/recommend_card1.png',
-                  onTap: () {
-                    context.go('/workout');
-                  },
-                ),
-                RecommendCard(
-                  imagePath: 'assets/images/recommend_card2.png',
-                  onTap: () {
-                    context.go('/workout');
-                  },
-                ),
-                RecommendCard(
-                  imagePath: 'assets/images/recommend_card3.png',
-                  onTap: () {
-                    context.go('/workout');
-                  },
-                ),
-              ],
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                spacing: 12,
+                children: [
+                  RecommendCard(
+                    imagePath: 'assets/images/recommend_card1.png',
+                    onTap: () {
+                      context.go('/workout');
+                    },
+                  ),
+                  RecommendCard(
+                    imagePath: 'assets/images/recommend_card2.png',
+                    onTap: () {
+                      context.go('/workout');
+                    },
+                  ),
+                  RecommendCard(
+                    imagePath: 'assets/images/recommend_card3.png',
+                    onTap: () {
+                      context.go('/workout');
+                    },
+                  ),
+                  RecommendCard(
+                    imagePath: 'assets/images/recommend_card3.png',
+                    onTap: () {
+                      context.go('/workout');
+                    },
+                  ),
+                ],
+              ),
             ),
 
             SizedBox(height: 55),
