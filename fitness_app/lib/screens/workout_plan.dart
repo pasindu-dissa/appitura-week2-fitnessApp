@@ -33,6 +33,53 @@ class DailyWorkoutPlan extends StatelessWidget {
                 },
               ),
             ),
+
+            const SizedBox(height: 30),
+
+            // 4. Workout Round Cards
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Column(
+                children: [
+                  WorkoutRoundCard(
+                    roundTitle: 'Round 01',
+                    exercises: [
+                      ExerciseItem(
+                        imageAsset:
+                            'assets/images/stretch.png', // Replace with your local asset
+                        title: 'Side Stretch Left',
+                        repetitions: '3x',
+                        onPlay: () {},
+                      ),
+                      ExerciseItem(
+                        imageAsset:
+                            'assets/images/stretch.png', // Replace with your local asset
+                        title: 'Side Stretch Right',
+                        repetitions: '3x',
+                        onPlay: () {},
+                      ),
+                    ],
+                  ),
+
+                  const SizedBox(height: 20),
+
+                  // Duplicate Round 01 as shown in your design screenshot
+                  WorkoutRoundCard(
+                    roundTitle: 'Round 01',
+                    exercises: [
+                      ExerciseItem(
+                        imageAsset: 'assets/images/stretch.png',
+                        title: 'Side Stretch Left',
+                        repetitions: '3x',
+                        onPlay: () {},
+                      ),
+                    ],
+                  ),
+
+                  const SizedBox(height: 40), // Bottom padding
+                ],
+              ),
+            ),
           ],
         ),
       ),

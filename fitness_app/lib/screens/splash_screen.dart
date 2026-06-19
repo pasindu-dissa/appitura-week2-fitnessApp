@@ -1,4 +1,3 @@
-import 'package:fitness_app/themes/app_theme.dart';
 import 'package:fitness_app/widgets/starttrain_button.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';

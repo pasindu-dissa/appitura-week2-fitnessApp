@@ -1,6 +1,5 @@
 import 'package:fitness_app/themes/app_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class StarttrainButton extends StatelessWidget {
   final VoidCallback onTrain;

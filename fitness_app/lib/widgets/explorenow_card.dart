@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../utils/responsive.dart';
 
 class ExplorenowCard extends StatelessWidget {
   final String imagePath;
@@ -14,32 +15,28 @@ class ExplorenowCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Responsive.init(context);
+
     return Container(
       alignment: Alignment.center,
       width: double.infinity,
-      height: 100,
+      height: Responsive.height(12),
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
-      // Clip behavior ensures the image stays within rounded corners
       clipBehavior: Clip.antiAlias,
       child: Stack(
         fit: StackFit.expand,
         children: [
-          // Background Image
           Image.asset(imagePath, fit: BoxFit.cover),
-
-          // Banner Text
           Center(
             child: Text(
               bannerText,
               style: TextStyle(fontSize: 16, color: Colors.white),
             ),
           ),
-
-          // Explore Button
           Positioned(
-            bottom: 4,
-            left: 32,
-            right: 32,
+            bottom: Responsive.height(0.1),
+            left: Responsive.width(8),
+            right: Responsive.width(8),
             child: TextButton(
               onPressed: onExplore,
               child: Text(

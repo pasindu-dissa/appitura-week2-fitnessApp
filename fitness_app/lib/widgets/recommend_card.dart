@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../utils/responsive.dart';
 
 class RecommendCard extends StatelessWidget {
   final String imagePath;
@@ -12,11 +13,12 @@ class RecommendCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: 82,
-        width: 110,
+        height: Responsive.height(11),
+        width: Responsive.width(28.5),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           image: DecorationImage(
