@@ -16,7 +16,7 @@ class StarttrainButton extends StatelessWidget {
           // Main text pill
           Expanded(
             child: Container(
-              height: 50,
+              height: 40,
               decoration: BoxDecoration(
                 color: AppTheme.primaryRed,
                 borderRadius: BorderRadius.circular(25),
@@ -26,9 +26,8 @@ class StarttrainButton extends StatelessWidget {
                   'Start Training',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 18,
-                    fontWeight: FontWeight.normal,
-                    letterSpacing: 0.5,
+                    fontSize: 15,
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
               ),
@@ -40,16 +39,16 @@ class StarttrainButton extends StatelessWidget {
 
           // Outer red circle with inner white play button
           Container(
-            width: 50,
-            height: 50,
+            width: 40,
+            height: 40,
             decoration: const BoxDecoration(
               color: AppTheme.primaryRed,
               shape: BoxShape.circle,
             ),
             child: Center(
               child: Container(
-                width: 30,
-                height: 30,
+                width: 24,
+                height: 24,
                 decoration: const BoxDecoration(
                   color: Colors.white,
                   shape: BoxShape.circle,
@@ -57,7 +56,7 @@ class StarttrainButton extends StatelessWidget {
                 child: const Icon(
                   Icons.play_arrow_rounded,
                   color: AppTheme.primaryRed,
-                  size: 24,
+                  size: 18,
                 ),
               ),
             ),

@@ -58,8 +58,6 @@ class SplashScreen extends StatelessWidget {
                       context.go('/dashboard');
                     },
                   ),
-
-                  SizedBox(height: (2)),
                 ],
               ),
             ),

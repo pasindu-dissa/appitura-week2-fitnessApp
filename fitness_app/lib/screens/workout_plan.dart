@@ -46,14 +46,14 @@ class DailyWorkoutPlan extends StatelessWidget {
                     exercises: [
                       ExerciseItem(
                         imageAsset:
-                            'assets/images/stretch.png', // Replace with your local asset
+                            'assets/images/stretch.png', 
                         title: 'Side Stretch Left',
                         repetitions: '3x',
                         onPlay: () {},
                       ),
                       ExerciseItem(
                         imageAsset:
-                            'assets/images/stretch.png', // Replace with your local asset
+                            'assets/images/stretch.png', 
                         title: 'Side Stretch Right',
                         repetitions: '3x',
                         onPlay: () {},
@@ -63,7 +63,7 @@ class DailyWorkoutPlan extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  // Duplicate Round 01 as shown in your design screenshot
+                  // Duplicate Round 01
                   WorkoutRoundCard(
                     roundTitle: 'Round 01',
                     exercises: [
@@ -76,7 +76,7 @@ class DailyWorkoutPlan extends StatelessWidget {
                     ],
                   ),
 
-                  const SizedBox(height: 40), // Bottom padding
+                  const SizedBox(height: 40), 
                 ],
               ),
             ),
